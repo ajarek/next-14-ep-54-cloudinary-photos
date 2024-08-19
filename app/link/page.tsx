@@ -2,7 +2,6 @@
 
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
-
 import { notFound } from 'next/navigation'
 import { useState } from 'react'
 
@@ -20,7 +19,7 @@ const ImageIdPage = ({
     setErr(true)
   }
   return (
-    <div className='flex justify-center items-center px-24 py-8'>
+    <div className='flex justify-center items-center px-24 max-lg:p-4 py-8 '>
       {err ? (
         <main className='  min-h-[calc(100vh-64px)] w-full flex flex-col items-center justify-center '>
           <>
@@ -47,7 +46,6 @@ const ImageIdPage = ({
           crop='fill'
           onError={imageError}
           overlays={[
-           
             {
               position: {
                 x: 0,
